@@ -1,0 +1,17 @@
+{
+  "name": "referral_api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "HurricanePete <zachary@smartly.io>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.4",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
