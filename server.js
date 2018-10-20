@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
 
-const {User} = require('./models');
+const {User, Code} = require('./models');
 
 //const {PORT, DATABASE_URL} = require('./config');
 
@@ -57,7 +57,7 @@ app.put('/users/:id', (req, res) => {
         const message = `Request path id ${req.params.id} and request body id ${req.body.id} must match`;
         return res.status(400).send(message);
     }
-    console.log(`Updating recipe ${req.params.id}`);
+    console.log(`Updating user ${req.params.id}`);
     User.update({
         id: req.params.id,
         email: req.body.email,
@@ -65,6 +65,8 @@ app.put('/users/:id', (req, res) => {
     })
     return res.status(204).end();
 })
+
+
 
 app.listen(process.env.PORT || 8080, () => {
     console.log(`Your app is listening on port ${process.env.PORT || 8080}`)
